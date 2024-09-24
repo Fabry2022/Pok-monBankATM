@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Bank ATM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/Index.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="img/pokebola.webp" alt="Pokemon Icon" class="navbar-icon me-2">
+                Pokémon Bank ATM
+            </a>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card login-card">
+                    <div class="card-header text-center">
+                        <h2 class="mb-0">Pokémon Bank Login</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-center mb-4">
+                            <img src="img/pikachu.png" alt="Pikachu" class="pikachu-image mb-3">
+                            <h3 class="welcome-text">Bienvenido a Pokémon Bank, Fernando</h3>
+                        </div>
+                        <form action="grafica.html" method="GET">
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Ingrese su PIN:</label>
+                                <input type="password" class="form-control" id="password" name="password" value="1234" required>
+                            </div>
+                            <a href="PokemonBank_Cajero.html" class="w-100">
+                                <button type="button" class="btn btn-primary w-100">Iniciar Sesión</button>
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pop-up message -->
+    <div class="popup" id="popup">
+        <div class="popup-card">
+            <div class="card-header">
+                <h3>¡Bienvenido a Pokémon Bank!</h3>
+            </div>
+            <div class="card-body">
+                <p>Tu compañero financiero confiable.</p>
+                <p>Mantén tus ahorros a salvo y administra tus finanzas con la seguridad de un verdadero Maestro Pokémon.</p>
+                <p>Inserta tu tarjeta y accede a tu cuenta con solo unos pasos.</p>
+                <p>Instrucciones:</p>
+                <ol>
+                    <li>Inserta tu tarjeta.</li>
+                    <li>Ingresa tu PIN.</li>
+                    <li>¡Comienza a entrenar tus ahorros!</li>
+                </ol>
+            </div>
+            <button class="btn btn-primary" onclick="closePopup()">Cerrar</button>
+        </div>
+    </div>
+
+    <footer class="footer py-3 mt-5">
+        <div class="container text-center">
+            <span>Pokémon. ©Nintendo/Creatures Inc./GAME FREAK inc.</span>
+        </div>
+    </footer>
+
+    <script>
+        // Mostrar el pop-up
+        function showPopup() {
+            document.getElementById('popupMessage').style.display = 'block';
+        }
+
+        // Cerrar el pop-up
+        function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+        }
+        
+
+        // Mostrar el pop-up automáticamente
+        setTimeout(showPopup, 1);
+    </script>
+</body>
+</html>
