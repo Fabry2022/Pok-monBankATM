@@ -44,47 +44,28 @@
         </div>
     </div>
 
-    <!-- Pop-up message -->
-    <div class="popup" id="popup">
-        <div class="popup-card">
-            <div class="card-header">
-                <h3>¡Bienvenido a Pokémon Bank!</h3>
-            </div>
-            <div class="card-body">
-                <p>Tu compañero financiero confiable.</p>
-                <p>Mantén tus ahorros a salvo y administra tus finanzas con la seguridad de un verdadero Maestro Pokémon.</p>
-                <p>Inserta tu tarjeta y accede a tu cuenta con solo unos pasos.</p>
-                <p>Instrucciones:</p>
-                <ol>
-                    <li>Inserta tu tarjeta.</li>
-                    <li>Ingresa tu PIN.</li>
-                    <li>¡Comienza a entrenar tus ahorros!</li>
-                </ol>
-            </div>
-            <button class="btn btn-primary" onclick="closePopup()">Cerrar</button>
-        </div>
-    </div>
-
     <footer class="footer py-3 mt-5">
         <div class="container text-center">
             <span>Pokémon. ©Nintendo/Creatures Inc./GAME FREAK inc.</span>
         </div>
     </footer>
 
-    <script>
-        // Mostrar el pop-up
-        function showPopup() {
-            document.getElementById('popupMessage').style.display = 'block';
-        }
+    <!-- SweetAlert Script -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-        // Cerrar el pop-up
-        function closePopup() {
-        document.getElementById('popup').style.display = 'none';
+    <script>
+        // Mostrar el pop-up usando SweetAlert
+        function showPopup() {
+            swal({
+                title: "¡Bienvenido a Pokémon Bank!",
+                text: "Tu compañero financiero confiable. Mantén tus ahorros a salvo y administra tus finanzas con la seguridad de un verdadero Maestro Pokémon.",
+                icon: "https://img.pokemondb.net/sprites/black-white/anim/normal/pikachu.gif",
+                button: "Cerrar",
+            });
         }
-        
 
         // Mostrar el pop-up automáticamente
-        setTimeout(showPopup, 1);
+        setTimeout(showPopup, 1000); 
     </script>
 </body>
 </html>
