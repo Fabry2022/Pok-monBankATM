@@ -101,12 +101,15 @@ body {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 0px;
+    float: left;
   }
   
   .recharge-btn:hover {
     background-color: #45a049;
   }
+  
+ 
   
 .popup-overlay {
     position: fixed;
@@ -215,7 +218,7 @@ body {
 }
 
 .send-btn {
-    background-color: green; /* Color de fondo verde */
+    background-color: #45a049; /* Color de fondo verde */
     color: white; /* Color de texto blanco */
     padding: 10px 20px; /* Espaciado interno */
     text-decoration: none; /* Sin subrayado */
@@ -224,6 +227,15 @@ body {
 }   
     
 .send-btn:hover {
-    background-color: darkgreen; /* Color más oscuro al pasar el mouse */
+    background-color: #45a049; /* Color más oscuro al pasar el mouse */
     }
     
+.add-btn {
+    background-color: #45a049; /* Color azul */
+    color: white;
+    display: inline-block;
+    margin-top: 0px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    float: left;
+}
